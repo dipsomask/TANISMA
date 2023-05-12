@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/manuitem1"
+        android:title="Профиль"/>
+    <item android:id="@+id/manuitem2"
+        android:title="Знакомится"/>
+    <item android:id="@+id/manuitem3"
+        android:title="Чат"/>
+</menu>

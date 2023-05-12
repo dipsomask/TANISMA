@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dating_App</string>
+    <string name="sendbutton">Send</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="tanisma">TANISMA</string>
+    <string name="searchbutton">Знакомится</string>
+    <string name="chartbutton">Чаты</string>
+    <string name="profilebutton">Профиль</string>
+    <string name="homebuttone">Home buttone</string>
+    <string name="header">head</string>
+    <string name="hint">Введите текст</string>
+</resources>
