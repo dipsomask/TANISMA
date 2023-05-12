@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "117791795513",
+    "project_id": "tanismachat-project",
+    "storage_bucket": "tanismachat-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117791795513:android:1325f1a00e9aaf66d7e0e8",
+        "android_client_info": {
+          "package_name": "com.example.dating_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117791795513-7p4tcj57g783m6dv8ivvmdsvh6v19eqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dating_app",
+            "certificate_hash": "c252d942285ad3ad2f54b375c8150395bd6388c6"
+          }
+        },
+        {
+          "client_id": "117791795513-qpjj1eh9rmqilqtcv9gq06s7p1dtt4ll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxKbttSsMoPAdH8kflUKEohoM6-Znp8jU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117791795513-qpjj1eh9rmqilqtcv9gq06s7p1dtt4ll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

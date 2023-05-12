@@ -5,34 +5,38 @@
     android:id="@+id/profileLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/foneprofilecolor"
-    android:backgroundTint="@color/foneprofilecolor"
+    android:background="#FEAC9E"
+    android:backgroundTint="#FEAC9E"
     tools:context=".ProfileActivity">
 
-    <ImageButton
-        android:id="@+id/homeBottoneInprofile"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="305dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/homebuttone"
-        android:foreground="@drawable/cherry_icon"
-        android:onClick="goHome"
+    <ImageView
+        android:id="@+id/profileImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cherry_icon" />
+        app:srcCompat="@drawable/profile_layer"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
-    <TextView
-        android:id="@+id/profileHeadname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/profilebutton"
-        android:textSize="23sp"
+    <ImageButton
+        android:id="@+id/homeprbutton"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:clickable="true"
+        android:contentDescription="@string/homebuttone"
+        android:focusable="true"
+        android:onClick="goHome"
+        android:scaleX="0.55"
+        android:scaleY="0.55"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toEndOf="@+id/homeBottoneInprofile"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="@+id/profileImgView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925"
+        app:srcCompat="@drawable/home_profil_icon"
+        tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
