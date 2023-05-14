@@ -8,5 +8,8 @@
     <string name="profilebutton">Профиль</string>
     <string name="homebuttone">Home buttone</string>
     <string name="header">head</string>
-    <string name="hint">Введите текст</string>
+    <string name="hint">Введите сообщение…</string>
+    <string name="username">USER</string>
+    <string name="messagefield">messagefield</string>
+
 </resources>

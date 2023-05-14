@@ -14,13 +14,102 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="35dp"
         android:backgroundTint="#9E6A60"
         android:clickable="true"
         android:focusable="true"
         android:foreground="@drawable/ic_userSend"
         android:tint="@color/fonemaincolor"
         app:fabSize="mini"
-        />
+        tools:ignore="ImageContrastCheck"
+        android:importantForAccessibility="no">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/btnUpload"
+        android:layout_toStartOf="@+id/btnSend">
+
+        <EditText
+            android:id="@+id/massage_Field"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="30dp"
+            android:background="#9E6A60"
+            android:backgroundTint="#9E6A60"
+            android:hint="@string/messagefield"
+            android:importantForAutofill="no">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="#9E6A60"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ic_userUpload"
+        android:tint="@color/fonemaincolor"
+        app:fabSize="mini"
+        tools:ignore="ImageContrastCheck"
+        android:importantForAccessibility="no">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginVertical="10dp"
+        android:backgroundTint="#9E6A60"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ic_back_to_charts"
+        android:tint="@color/fonemaincolor"
+        app:fabSize="mini"
+        tools:ignore="ImageContrastCheck"
+        android:importantForAccessibility="no">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <EditText
+            android:id="@+id/text_user"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="90dp"
+            android:hint="@string/username"
+            android:backgroundTint="#9E6A60"
+            android:background="#9E6A60"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:importantForAutofill="no">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ListView
+        android:id="@+id/list_of_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/text_layout"
+        android:layout_below="@+id/text_userLayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+
+    </ListView>
+
 </RelativeLayout>
 
