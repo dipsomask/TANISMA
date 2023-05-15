@@ -5,7 +5,6 @@
     android:id="@+id/userChatLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/userChat_layout"
     tools:context=".UsersChat">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -34,15 +33,14 @@
         android:layout_toStartOf="@+id/btnSend">
 
         <EditText
-            android:id="@+id/massage_Field"
+            android:id="@+id/massage_field"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginBottom="30dp"
             android:background="#9E6A60"
             android:backgroundTint="#9E6A60"
-            android:hint="@string/messagefield"
-            android:importantForAutofill="no">
-        </EditText>
+            android:hint="@string/hint"
+            android:importantForAutofill="no"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -94,8 +92,7 @@
             android:background="#9E6A60"
             android:gravity="center"
             android:textSize="30sp"
-            android:importantForAutofill="no">
-        </EditText>
+            android:importantForAutofill="no"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <ListView
@@ -108,7 +105,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp">
-
     </ListView>
 
 </RelativeLayout>

@@ -10,6 +10,5 @@
     <string name="header">head</string>
     <string name="hint">Введите сообщение…</string>
     <string name="username">USER</string>
-    <string name="messagefield">messagefield</string>
-
+    <string name="usrchat_layout">userchatlayout</string>
 </resources>
