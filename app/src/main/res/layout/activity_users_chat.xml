@@ -5,6 +5,7 @@
     android:id="@+id/userChatLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/userchat_layout"
     tools:context=".UsersChat">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -17,7 +18,7 @@
         android:backgroundTint="#9E6A60"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="@drawable/ic_userSend"
+        android:foreground="@drawable/ic_usersend"
         android:tint="@color/fonemaincolor"
         app:fabSize="mini"
         tools:ignore="ImageContrastCheck"
@@ -40,7 +41,9 @@
             android:background="#9E6A60"
             android:backgroundTint="#9E6A60"
             android:hint="@string/hint"
-            android:importantForAutofill="no"/>
+            android:inputType="text|number"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -53,7 +56,7 @@
         android:backgroundTint="#9E6A60"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="@drawable/ic_userUpload"
+        android:foreground="@drawable/ic_userupload"
         android:tint="@color/fonemaincolor"
         app:fabSize="mini"
         tools:ignore="ImageContrastCheck"
@@ -92,7 +95,9 @@
             android:background="#9E6A60"
             android:gravity="center"
             android:textSize="30sp"
-            android:importantForAutofill="no"/>
+            android:inputType="text|number"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ListView
