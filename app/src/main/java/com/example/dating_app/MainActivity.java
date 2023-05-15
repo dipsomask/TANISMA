@@ -3,20 +3,15 @@ package com.example.dating_app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
+
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Spinner;
 
-import androidx.annotation.Nullable;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     int ct = 0;
@@ -57,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         ct++;
     }
     public void startProfile(View v){
-        Intent intent = new Intent(this, ProfileActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
         startActivity(intent);
     }
     public void startChat(View v){
@@ -69,11 +64,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
 }
 
 

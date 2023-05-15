@@ -22,7 +22,8 @@
         android:layout_height="130dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/ic_users"/>
+        android:src="@drawable/ic_users"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/profilepic"
