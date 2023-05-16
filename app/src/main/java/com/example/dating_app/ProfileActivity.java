@@ -1,6 +1,5 @@
 package com.example.dating_app;
 
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -46,6 +45,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -96,7 +96,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                     try {
                         Glide.with(ProfileActivity.this).load(image).into(set);
-                    } catch (Exception e) {
+                    } catch (Exception ignored) {
                     }
                 }
             }
@@ -146,7 +146,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                     try {
                         Glide.with(ProfileActivity.this).load(image).into(set);
-                    } catch (Exception e) {
+                    } catch (Exception ignored) {
                     }
 
                 }
@@ -180,7 +180,7 @@ public class ProfileActivity extends AppCompatActivity {
 
                     try {
                         Glide.with(ProfileActivity.this).load(image).into(set);
-                    } catch (Exception e) {
+                    } catch (Exception ignored) {
                     }
 
                 }
@@ -202,8 +202,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     // checking storage permission ,if given then we can add something in our storage
     private Boolean checkStoragePermission() {
-        boolean result = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == (PackageManager.PERMISSION_GRANTED);
-        return result;
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == (PackageManager.PERMISSION_GRANTED);
     }
 
     // requesting for storage permission
@@ -257,7 +256,8 @@ public class ProfileActivity extends AppCompatActivity {
     private void updatePassword(String oldp, final String newp) {
         pd.show();
         final FirebaseUser user = firebaseAuth.getCurrentUser();
-        AuthCredential authCredential = EmailAuthProvider.getCredential(user.getEmail(), oldp);
+        assert user != null;
+        AuthCredential authCredential = EmailAuthProvider.getCredential(Objects.requireNonNull(user.getEmail()), oldp);
         user.reauthenticate(authCredential)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -361,7 +361,7 @@ public class ProfileActivity extends AppCompatActivity {
     // Here we are showing image pic dialog where we will select
     // and image either from camera or gallery
     private void showImagePicDialog() {
-        String options[] = {"Camera", "Gallery"};
+        String[] options = {"Camera", "Gallery"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Pick Image From");
         builder.setItems(options, new DialogInterface.OnClickListener() {
@@ -390,6 +390,7 @@ public class ProfileActivity extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == IMAGEPICK_GALLERY_REQUEST) {
+                assert data != null;
                 imageuri = data.getData();
                 uploadProfileCoverPhoto(imageuri);
             }

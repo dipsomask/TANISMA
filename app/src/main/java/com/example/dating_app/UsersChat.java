@@ -17,7 +17,6 @@ public class UsersChat extends AppCompatActivity {
         setContentView(R.layout.activity_users_chat);
 
         //пользователь ещё не авторизован
-        if(FirebaseAuth.getInstance().getCurrentUser() == null)
-            startActivityForResult(AuthUI);
+        //if(FirebaseAuth.getInstance().getCurrentUser() == null)
     }
 }
